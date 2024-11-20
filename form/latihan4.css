@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(206, 203, 203);
+}
+form{
+    background-color: rgb(246, 248, 248);
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    
+}
+select{
+    border: 3px solid rgb(5, 5, 5);
+        border-radius: 5px;
+        background: transparent;
+}
+h2{
+    background-color: rgb(58, 249, 97);
+    border-radius: 5px;
+}
+input{
+    height: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #040404;
+    position: relative;
+    margin: 10px 0;
+    border-bottom: 2px solid #0a0a0a;
+}
+button{
+    border: 3px solid rgb(251, 255, 255);
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 400px;
+        backdrop-filter: blur(20px);
+        background: rgb(253, 251, 251);
+        padding: 6px 50px;
+}
+button::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f0f0;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+button::before{
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #00ff1a, #e4f40a, #0eeb19, #2a9002, 
+        #00FFD5, #002BFF, #9a9c9b, #464747
+    );
+    position: absolute;
+    top: -2;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 20px;
+    opacity: 1;
+}

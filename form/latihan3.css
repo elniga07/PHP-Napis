@@ -1,0 +1,59 @@
+*{
+    font-family: 'poppins',sans-serif;
+}
+body{
+   background: url(logosmk.PNG) no-repeat;
+   background-position: center;
+}
+button{
+        border: 3px solid rgb(251, 255, 255);
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 400px;
+        backdrop-filter: blur(20px);
+        background: rgb(253, 251, 251);
+        padding: 6px 50px;
+}
+button::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f0f0;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+button::before{
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #0066ff, #e4f40a, #FFFB00, #48FF00, 
+        #00FFD5, #002BFF, #00ffae, #04aff9
+    );
+    position: absolute;
+    top: -2;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 20px;
+    opacity: 1;
+}
+.inp{
+    height: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #040404;
+    position: relative;
+    margin: 10px 0;
+    border-bottom: 2px solid #0a0a0a;
+}
